@@ -5,6 +5,8 @@
   <title>Hello AWS CodeDeploy</title>
 </head>
 <body>
-  <h2>Hello AWS CodeDeploy!!</h2>
+  <h2>Hello AWS CodeDeploy!! v2</h2>
+  <p>Updated by CI/CD pipeline.</p>
+  <p>Deploy test: 2026-08-18</p>
 </body>
 </html>
