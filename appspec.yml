@@ -1,0 +1,37 @@
+version: 0.0
+os: linux
+
+# リポジトリのファイルを /var/www/html にコピー
+files:
+  - source: /laravel
+    destination: /var/www/laravel
+  - source: /nginx/laravel.conf
+    destination: /etc/nginx/conf.d/
+
+# ファイルのパーミッション設定
+permissions:
+  - object: /var/www/laravel
+    pattern: "**"
+    owner: nginx
+    group: nginx
+    mode: "644"
+    type:
+      - file
+  - object: /var/www/laravel
+    pattern: "**"
+    owner: nginx
+    group: nginx
+    mode: "755"
+    type:
+      - directory
+
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 60
+      runas: root
+
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 60
+      runas: root
