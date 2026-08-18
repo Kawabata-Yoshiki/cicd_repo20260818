@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <title>Hello AWS CodeDeploy</title>
 </head>
 <body>
-  <h2>Hello World!!</h2>
+  <h2>Hello AWS CodeDeploy!!</h2>
 </body>
 </html>
